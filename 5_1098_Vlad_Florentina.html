@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc Asteroids</title>
+    <link rel="stylesheet" href="5_1098_Vlad_Florentina.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="ui-layer">
+            <div>Scor: <span id="scoreDisplay">0</span></div>
+            <div>Vieti: <span id="livesDisplay">3</span></div>
+        </div>
+
+        <div id="gameOverScreen">
+            <h1>GAME OVER</h1>
+            <p>Scor final: <span id="finalScore">0</span></p>
+            
+            <input type="text" id="playerName" placeholder="Numele tau" maxlength="10">
+            <button id="restartBtn">Salveaza si Restarteaza</button>
+            
+            <div id="highScores"></div>
+        </div>
+    </div>
+
+    <div id="touch-controls">
+        <div class="d-pad">
+            <button id="btnUp" class="dir-btn">▲</button>
+            <div class="middle-row">
+                <button id="btnLeft" class="dir-btn">◄</button>
+                <button id="btnRight" class="dir-btn">►</button>
+            </div>
+            <button id="btnDown" class="dir-btn">▼</button>
+        </div>
+
+        <div class="action-buttons">
+            <div class="rot-group">
+                <button id="btnRotLeft">Z (St)</button>
+                <button id="btnRotRight">C (Dr)</button>
+            </div>
+            <button id="btnFire" class="fire-btn">X (FOC)</button>
+        </div>
+    </div>
+
+    <script src="5_1098_Vlad_Florentina.js"></script>
+</body>
+</html>
+
+

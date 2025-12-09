@@ -1,0 +1,143 @@
+/* Stiluri generale */
+body {
+    background-color: #202020;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Aseaza elementele unul sub altul */
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    touch-action: none; /* Previne zoom-ul pe mobil cand apesi butoane */
+}
+
+/* Containerul jocului */
+#game-container {
+    position: relative; /* Ca sa putem pozitiona scrisul peste joc */
+    border: 2px solid white;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+    max-width: 100%; /* Sa nu iasa din ecran pe telefoane mici */
+    height: auto;
+}
+
+/* Scorul si vietile */
+#ui-layer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Ecranul de Game Over */
+#gameOverScreen {
+    display: none; /* Ascuns implicit */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrare perfecta */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 1px solid white;
+    text-align: center;
+    min-width: 300px;
+}
+
+#gameOverScreen input {
+    padding: 5px;
+    margin: 10px 0;
+    width: 80%;
+}
+
+#gameOverScreen button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+/* --- STILIZARE BUTOANE TOUCH (CONTROLLER) --- */
+#touch-controls {
+    display: flex;
+    justify-content: space-between; /* Distanta intre stanga si dreapta */
+    width: 100%;
+    max-width: 800px;
+    margin-top: 15px;
+}
+
+button {
+    user-select: none; /* Nu lasa userul sa selecteze textul de pe buton */
+    outline: none;
+}
+
+/* Grupul de directii (Stanga) */
+.d-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-row {
+    display: flex;
+    gap: 10px; /* Spatiu intre stanga si dreapta */
+    margin: 5px 0;
+}
+
+.dir-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #444;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.dir-btn:active {
+    background-color: #666; /* Culoare cand apesi */
+}
+
+/* Grupul de actiuni (Dreapta) */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.rot-group {
+    display: flex;
+    gap: 10px;
+}
+
+#btnRotLeft, #btnRotRight {
+    width: 80px;
+    height: 50px;
+    background-color: #555;
+    color: white;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.fire-btn {
+    width: 100px;
+    height: 70px;
+    background-color: #8b0000; /* Rosu inchis */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #ff4444;
+    border-radius: 10px;
+}
+
+.fire-btn:active {
+    background-color: red;
+}
