@@ -1,0 +1,1 @@
+A high-performance retro Asteroids clone built with HTML5 Canvas and Vanilla JavaScript. Features smooth physics-based movement, a progressive difficulty system with multi-colored asteroids, local high-score tracking, and fully responsive touch controls for mobile gameplay
